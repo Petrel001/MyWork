@@ -2,9 +2,11 @@
 #include <ctype.h>
 
 int main(){
-    char a[101];
-    char b[];
-    scanf("%s",&a);
-    printf("%s",a);
+    FILE *file;
+    file = fopen("test.text","r");
+    if (file == NULL){
+        perror("Error");
+        return 1;
+    }
     return 0;
 }
